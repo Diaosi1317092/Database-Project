@@ -499,7 +499,7 @@ When evaluating the performance of a database, scalability is a critical factor 
 \subsubsection*{Horizontal Scaling}
 \addcontentsline{toc}{subsubsection}{Horizontal Scaling}
 
-To test horizontal scaling of databases, I focused on distributing the workload across multiple nodes to evaluate how well the system handles increasing traffic. For this, I used \texttt{pgpool2} as the load balancer, which helps distribute queries across the master and replica nodes. The general process involves:
+To test horizontal scaling of databases, I focused on distributing the workload across multiple nodes to evaluate how well the system handles increasing traffic. For this, I used \texttt{pgpool2}\cite{pgpool-en}\cite{pgpool-zhcn} as the load balancer, which helps distribute queries across the master and replica nodes. The general process involves:
 \begin{itemize}
     \item\textbf{Setting up \texttt{pgpool2}:} I installed and configured \texttt{pgpool2} to manage multiple \texttt{PostgreSQL} or \texttt{openGauss} nodes, with the master handling write operations and replicas handling read operations. This setup ensures load balancing and efficient resource use.
     \item\textbf{Configuring Nodes:} I set up at least one master node and multiple replica nodes, enabling streaming replication on \texttt{PostgreSQL} and standby replication on \texttt{openGauss}. \texttt{pgpool2} is configured to direct read queries to replicas and write queries to the master.
