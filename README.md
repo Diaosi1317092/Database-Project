@@ -126,15 +126,10 @@ pgbench -h localhost -p 5432 -U postgres -d postgres -f horizontal_pgbench_init.
 
 ```cmd
 docker run --name project3-opengauss2C1G --cpuset-cpus="0,1" --cpus="2.0" --memory="1g" --privileged=true -d -e GS_PASSWORD=Baiyu!0123 -v D:/project1/var/lib/opengauss  -u root -p 15432:5432 docker.1panel.live/enmotech/opengauss:3.0.0 
-
 docker run --name project3-opengauss4C2G --cpuset-cpus="0,1,2,3" --cpus="4.0" --memory="2g" --privileged=true -d -e GS_PASSWORD=Baiyu!0123 -v D:/project2/var/lib/opengauss  -u root -p 15432:5432 docker.1panel.live/enmotech/opengauss:3.0.0 
-
 docker run --name project3-opengauss8C4G --cpuset-cpus="0,1,2,3,4,5,6,7" --cpus="8.0" --memory="4g" --privileged=true -d -e GS_PASSWORD=Baiyu!0123 -v D:/project3/var/lib/opengauss  -u root -p 15432:5432 docker.1panel.live/enmotech/opengauss:3.0.0 
-
 docker run -d --name project3-postgres2C1G  --cpuset-cpus="0,1" --cpus="2.0" --memory="1g" -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=114514 -e POSTGRES_DB=postgres -e PGDATA=/var/lib/postgresql/data/pgdata -p 5432:5432 -v D:/var/lib/postgresql/data docker.1panel.live/ubuntu/postgres:14-22.04_beta
-
 docker run -d --name project3-postgres4C2G  --cpuset-cpus="0,1,2,3" --cpus="4.0" --memory="1g" -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=114514 -e POSTGRES_DB=postgres -e PGDATA=/var/lib/postgresql/data/pgdata -p 5432:5432 -v D:/var/lib/postgresql/data docker.1panel.live/ubuntu/postgres:14-22.04_beta
-
 docker run -d --name project3-postgres8C4G  --cpuset-cpus="0,1,2,3,4,5,6,7" --cpus="8.0" --memory="1g" -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=114514 -e POSTGRES_DB=postgres -e PGDATA=/var/lib/postgresql/data/pgdata -p 5432:5432 -v D:/var/lib/postgresql/data docker.1panel.live/ubuntu/postgres:14-22.04_beta
 ```
 
